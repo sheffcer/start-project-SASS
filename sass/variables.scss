@@ -24,12 +24,9 @@ $color-warning:               hsl(35, 84%, 62%);
 $text-color:                  $gray-darkest;
 $text-color--muted:           $gray;
 $body-bg:                     $white;
-
 $link-color:                  $color-main;
 $link-color--hover:           darken($color-main, 15%);
-
 $border-color:                $gray-light;
-
 
 
 // Базовая типографика
@@ -46,7 +43,6 @@ $font-size--h5:               rem(16px);
 $font-size--h6:               rem(16px);
 
 $font-size--small:            80%;
-
 $line-height:                 1.5;
 
 $font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -55,29 +51,28 @@ $font-family--monospace:      SFMono-Regular, 'Menlo', 'Monaco', 'Consolas', 'Li
 $font-family--headings:       $font-family;
 
 
-
 // Ширины
 
-$screen-xs:                   0;
+$screen-xs:                   320px;
 $screen-sm:                   480px;
 $screen-md:                   768px;
 $screen-lg:                   992px;
 $screen-xl:                   1200px;
 $screen-xxl:                  1800px;
 
-$container-sm:                100%;
-$container-md:                100%;
+//$container-sm:                100%;
+//$container-md:                100%;
+$container-xs:                $screen-xs - 30;
+$container-md:                $screen-md - 30;
 $container-lg:                $screen-lg - 30;
 $container-xl:                $screen-xl - 30;
 $container-xxl:               $screen-xxl - 30;
-
 
 
 // Модульная сетка
 
 $grid-columns:                12;
 $grid-gutter-width:           rem(30px);
-
 
 
 // Разное

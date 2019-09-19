@@ -1,12 +1,12 @@
-$screen-xs:                   0 !default;
+$screen-xs:                   320px !default;
 $screen-sm:                   480px !default;
 $screen-md:                   768px !default;
 $screen-lg:                   992px !default;
 $screen-xl:                   1200px !default;
 $screen-xxl:                  1800px !default;
 
-$container-sm:                100% !default;
-$container-md:                100% !default;
+$container-xs:                ($screen-xs - 30) !default;
+$container-sm:                ($screen-sm - 30) !default;
 $container-lg:                ($screen-lg - 30) !default;
 $container-xl:                ($screen-xl - 30) !default;
 $container-xxl:               ($screen-xxl - 30) !default;
