@@ -72,7 +72,8 @@ $container-xxl:               $screen-xxl - 30;
 // Модульная сетка
 
 $grid-columns:                12;
-$grid-gutter-width:           rem(30px);
+//$grid-gutter-width:           rem(30px);
+$grid-gutter-width:           30px;
 
 
 // Разное
