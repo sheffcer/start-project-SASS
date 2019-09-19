@@ -1,12 +1,11 @@
 @mixin clearfix() {
+
   &::after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
 }
-
-// класс для сокрытия элементов
 
 @mixin visually-hidden() {
   position: absolute;
