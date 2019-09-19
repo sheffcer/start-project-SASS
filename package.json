@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "private": false,
   "description": "Стартовый проект «cat-energy",
+  "lint-staged": {
+    "*.js": "editorconfig-cli",
+    "*.css": "stylelint",
+    "*.scss": "stylelint --syntax=scss"
+  },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "stylelint": "^9.10.1",
