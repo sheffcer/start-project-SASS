@@ -1,5 +1,5 @@
 {
-  "name": "cat-energy",
+  "name": "start-project-SASS",
   "version": "1.0.0",
   "private": false,
   "description": "Стартовый проект «cat-energy",
@@ -39,7 +39,9 @@
   "scripts": {
     "test": "editorconfig-cli",
     "build": "gulp build && gulp normalize",
-    "start": "npm run build && gulp serve"
+    "start": "npm run build && gulp serve",
+    "test:js": "eslint /blocks/**/*.js /js/**/*.js",
+    "test:style": "stylelint \"sass/**/*.scss\" --syntax=scss"
   },
   "editorconfig-cli": [
     "*.html",
