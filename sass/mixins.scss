@@ -1,0 +1,89 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// класс для сокрытия элементов
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+//@mixin container() {
+//  width: 320px;
+//  margin: 0 auto;
+//  //outline: 1px dotted aqua!important;
+//
+//  @media (min-width: $tablet-widths) {
+//    width: 660px;
+//  }
+//
+//  @media (min-width: $desktop-widths) {
+//    width: 960px;
+//  }
+//}
+
+@mixin focus() {
+  outline: 0;
+  box-shadow: 0 0 0 2px transparentize($color-main, 0.3);
+}
+
+@mixin field-focus() {
+  $color-main: hsl(208, 98%, 43%) !default;
+  $opacity: 0.7 !default;
+
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+}
+
+@mixin radio-focus() {
+  //$color-main: $color-apple !default;
+  $opacity: 0.7 !default;
+
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba($color-apple, $opacity);
+}
+
+@mixin hide-text {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin field-name {
+  $line-height: 1.375em !default;
+
+  display: block;
+  margin-bottom: 0.4em;
+  line-height: $line-height;
+  font-weight: 700;
+}
+
+@mixin field-help-text {
+  $text-color--muted: hsl(0, 0%, 50%) !default;
+  $font-size--small: 0.75em !default;
+
+  display: block;
+  padding-top: 0.4em;
+  font-size: $font-size--small;
+  line-height: 1.2em;
+  color: $text-color--muted;
+
+  &:empty {
+    display: none;
+  }
+}
