@@ -1,19 +1,18 @@
 .promo {
   padding-top: 16px;
   padding-bottom: 24px;
-  background-color: #F1F4FF;
-  color: #7D93DB;
+  background-color: #f1f4ff;
+  color: #7d93db;
 
   &__inner {
     @include container;
-    outline: 1px dotted black;
+    outline: 1px dotted #000000;
   }
 
   &__grid {
     @include row;
     //outline: 1px dotted black;
-    outline: 1px dotted aqua !important;
-
+    outline: 1px dotted #00ffff !important;
   }
 
   &__img {
@@ -22,7 +21,7 @@
     @include col(md, 5);
     @include col(lg, 3);
     background-color: rgba(255, 255, 255, 0.5);
-    outline: 1px dotted green;
+    outline: 1px dotted #008000;
   }
 
   &__text {
@@ -30,7 +29,7 @@
     @include col(sm, 12);
     @include col(md, 7);
     @include col(lg, 9);
-    outline: 1px dashed red;
+    outline: 1px dashed #ff0000;
   }
 
   &__item {
@@ -38,7 +37,7 @@
     @include col(sm, 6);
     @include col(md, 4);
     @include col(lg, 2);
-    outline: 1px dashed red;
+    outline: 1px dashed #ff0000;
   }
 }
 
@@ -56,12 +55,12 @@
     @include col(lg, 3, $grid-columns, 16px); // LG (992 по умолчанию) — 3 из 12, промежутки 16px
     @include col(xl, 2, $grid-columns, 20px); // XL (1200 по умолчанию) — 2 из 12, промежутки 20px
     //@include col(xxl, 1, $grid-columns, 26px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
-    outline: 1px dotted green;
+    outline: 1px dotted #008000;
     box-sizing: border-box;
     //width: 100%;
   }
 
   &__element p {
-    outline: 1px dotted red;
+    outline: 1px dotted #ff0000;
   }
 }
