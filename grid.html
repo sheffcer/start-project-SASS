@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Flexbox fallback */
+        .l-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .l-grid>.l-grid__item {
+            flex: 1 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .l-grid--4x4>.l-grid__item {
+            /* width: 25%; */
+        }
+
+        @supports(display: grid) {
+
+            /* resets pre grid */
+            .l-grid--4x4>.l-grid__item {
+                /* width: auto;
+                display: grid; */
+            }
+
+            .l-grid {
+                /* display: grid; */
+            }
+        }
+
+        .l-grid--4x4 {
+            /* grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, minmax(13rem, 1fr)); */
+        }
+
+        .l-span-column-2 {
+            grid-column-start: span 2;
+        }
+
+        .l-span-row-2 {
+            grid-row-start: span 2;
+        }
+
+        .l-full-height {
+            /* min-height: 100vh; */
+        }
+
+        #grid {
+            display: grid;
+            grid-template-rows: 50px 1fr 80px;
+            grid-template-columns: 120px 1fr 80px;
+            grid-gap: 5px;
+            height: 90vh;
+        }
+            #grid > div {
+            background-color: #66CC00;
+        }
+            #item1 {
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-column-end: 2;
+           }
+            #item2 {
+            grid-row-start: 3;
+            grid-column-start: 2;
+            grid-row-end: 4;
+            grid-column-end: 4;
+            }
+    </style>
+</head>
+<body>
+    <div class="l-grid">
+        <div class="l-grid__item ">
+            <h2 class="l-grid__heading">W-150px</h2>
+        </div>
+        <div class="l-grid__item l-span-column-2">
+            <h2 class="l-grid__heading">W-dynamic</h2>
+        </div>
+        <div class="l-grid__item">
+            <h2 class="l-grid__heading">W-150px</h2>
+        </div>
+        <div class="l-grid__item l-span-column-2 l-span-row-2">
+            <h2 class="l-grid__heading">W-50%</h2>
+        </div>
+        <div class="l-grid__item ">
+            <h2 class="l-grid__heading">W-60%</h2>
+        </div>
+        <div class="l-grid__item ">
+            <h2 class="l-grid__heading">W-40%</h2>
+        </div>
+        <div class="l-grid__item l-span-column-2">
+            <h2 class="l-grid__heading">W-50%</h2>
+        </div>
+    </div>
+    <div id="grid">
+        <div id="item1"></div>
+        <div id="item2"></div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"></html>
+<title>Example</title>
+<style>
+    body {
+        display: grid;
+        grid-template-areas:
+            'header1 header1 header1'
+            'nav article ads'
+            'footer footer footer';
+        grid-template-rows: 60px 1fr 60px;
+        grid-template-columns: 20% 1fr 15%;
+        grid-gap: 10px;
+        height: 100vh;
+        margin: 0;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    div {
+        padding: 20px;
+        background: gold;
+    }
+
+    .pageHeader1 {
+        grid-area: header1;
+    }
+    .pageHeader2 {
+        grid-area: header2;
+    }
+    .pageHeader3 {
+        grid-area: header3;
+    }
+
+    .pageFooter {
+        grid-area: footer;
+    }
+
+    .mainArticle {
+        grid-area: article;
+    }
+
+    .mainNav {
+        grid-area: nav;
+    }
+
+    .siteAds {
+        grid-area: ads;
+    }
+</style>
+
+<body>
+    <!-- <div class="container"> -->
+        <header class="pageHeader1">Header1</header>
+        <!-- <header class="pageHeader2">Header2</header>
+        <header class="pageHeader3">Header3</header> -->
+        <article class="mainArticle">Article</article>
+        <nav class="mainNav">Nav</nav>
+        <div class="siteAds">Ads</div>
+        <footer class="pageFooter">Footer</footer>
+    <!-- </div> -->
+</body>
+
+</html>

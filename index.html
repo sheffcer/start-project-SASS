@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/style.min.css"> -->
+    <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
+    <title>Grid</title>
+    <style>
+
+.grid {
+    display: grid;
+    color: #fff;
+    font-weight: 500;
+}
+
+.grid {
+    grid-template-columns: 150px 1fr 1fr 150px;
+    grid-template-rows: 150px 255px;
+}
+
+.grid-item {
+    padding: .2em;
+    /* background: #009688; */
+    background: grey;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.grid-item.one {
+    grid-column: 1/2;
+    grid-row-end: 2;
+}
+.grid-item.two {
+    grid-column: 2/2 span;
+    grid-row-end: 2;
+}
+.grid-item.three {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.grid-item.thour {
+    grid-column: 1/2 span;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 60px 1fr;
+    align-items: stretch;
+
+}
+
+.grid-item.thour div {
+    padding: .2em;
+    border: 1px solid #fff;
+    background-color: darkgrey;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.grid-item.five {
+    grid-row-start: 2;
+    grid-column: 3/2 span;
+    grid-row-end: 2;
+}
+
+.first {
+    grid-column: 1/2;
+    grid-row: 1/ 1;
+}
+.second {
+    grid-row: 1/ 1;
+    grid-column: 2/2;
+}
+.fird {
+    grid-row:2 / 2;
+    grid-column: 1/2 span;
+}
+
+</style>
+</head>
+<body>
+    <div class="promo">
+        <div class="promo__inner">
+            <div class="grid">
+                <div class="grid-item one">W-150px</div>
+                <div class="grid-item two">W-Dynamic</div>
+                <div class="grid-item three">W-150px</div>
+                <div class="grid-item thour">
+                    <div class="first">W-60%</div>
+                    <div class="second">W-40%</div>
+                    <div class="fird">W-50%</div>
+                </div>
+                <div class="grid-item five">W-50%</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
